@@ -1,0 +1,50 @@
+<view class="search-btn">
+  <view bindtap='toSearch'>
+    <icon type="search" size="16" color="#B2B2B2"/>  搜索
+  </view>
+</view>
+<!--最新菜系  -->
+<view class='new-food container'>
+  <view class='new-head'>
+    最新菜系
+  </view>
+  <scroll-view scroll-x="true" style="white-space: nowrap; display:flex " class='new-scroll'>
+    <view wx:for="{{newList}}" wx:for-item="item" class="new-scroll-list" bindtap='toDetails' data-id="{{item.objectId}}">
+      <view style="background:url('{{item.mimg}}') no-repeat center/cover;">
+      </view>
+      {{item.mname}}
+    </view>
+    
+    
+  </scroll-view>
+</view>
+
+<!--类型  -->
+<view class='new-food container'>
+  <view class='new-head'>
+    类型
+  </view>
+  <view class='foods-type'>
+    <view class='food-list' wx:for='{{typeList}}' wx:for-item="item" bindtap='tolists'  data-name="{{item.cname}}" data-id="{{item.objectId}}" data-type="cate">
+      <view style="background:url('{{item.cimg}}') no-repeat center/cover;">
+      </view>
+      {{item.cname}}
+    </view>
+  </view>
+</view>
+
+<!--场景  -->
+<view class='new-food container'>
+  <view class='new-head'>
+    场景
+  </view>
+  <view class='foods-type'>
+    <view wx:for='{{timeList}}' wx:for-item="item" class='food-list' bindtap='tolists' data-name="{{item.fname}}" data-id="{{item.objectId}}" data-type="time">
+      <view style="background:url('{{item.fimg}}') no-repeat center/cover;">
+      </view>
+      {{item.fname}}
+    </view>
+  </view>
+</view>
+
+

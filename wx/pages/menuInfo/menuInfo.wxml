@@ -1,0 +1,49 @@
+<!--pages/menuInfo/menuInfo.wxml-->
+<view class='main'>
+  <view class='box'>
+    <text>标题</text>
+    <input type='text' value='{{title}}' bindinput='titleInput' />
+  </view>
+  <view class='box'>
+    <text>信息</text>
+    <textarea value='{{info}}' bindinput="infoInput" auto-height />
+  </view>
+  <view class='box'>
+    <text>封面</text>
+    <image src='{{img}}' bindtap='upFiles'></image>
+  </view>
+  <view class='box'>
+    <text>所属场景</text>
+    <picker bindchange="timePickerChange" range-key='fname' value="{{timeIndex}}" range="{{timeArray}}">
+      <view class="picker">
+        {{timeArray[timeIndex].fname}}
+      </view>
+    </picker>
+  </view>
+  <view class='box'>
+    <text>所属类型</text>
+    <picker bindchange="typePickerChange" range-key='cname' value="{{typeIndex}}" range="{{typeArray}}">
+      <view class="picker">
+        {{typeArray[typeIndex].cname}}
+      </view>
+    </picker>
+  </view>
+  <view class='box'>
+    <text>是否新品</text>
+    <switch wx:if="{{mnew}}" checked bindchange="switch1Change"/>
+    <switch wx:else  bindchange="switch1Change"/>
+  </view>
+  <view class='box'>
+    <text>热门搜索</text>
+    <switch wx:if="{{hot}}" checked  bindchange="switch2Change"/>
+    <switch wx:else  bindchange="switch2Change"/>
+  </view>
+  
+  <view class='box'>
+    <text>是否显示</text>
+    <switch wx:if="{{show}}" checked  bindchange="switch3Change"/>
+    <switch wx:else bindchange="switch3Change"/>
+  </view>
+
+  <button type="default" bindtap="submit" hover-class="other-button-hover"> 提交 </button>
+</view>

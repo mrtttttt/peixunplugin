@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/lists/lists",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/details/details",
+    "pages/admin/admin",
+    "pages/typeManage/typeManage",
+    "pages/timeManage/timeManage",
+    "pages/menuManage/menuManage",
+    "pages/menuInfo/menuInfo",
+    "pages/typeInfo/typeInfo",
+    "pages/usInfo/usInfo",
+    "pages/orderList/orderList"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#F9F022",
+    "navigationBarTitleText": "雷刚诚信一条龙",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "backgroundColor": "#F9F022",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "团队介绍"
+      },
+      {
+        "pagePath": "pages/admin/admin",
+        "text": "我的"
+      }
+    ]
+  }
+}

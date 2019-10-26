@@ -1,0 +1,9 @@
+<!--pages/menuManage/menuManage.wxml-->
+<view class="container">
+  <view class="ul">
+    <view wx:for='{{list}}' wx:for-item='item' class='li' bindtap='toDetails' data-id="{{item.objectId}}">{{item.mname}}</view>
+  </view>
+</view>
+<view class='more'>
+  <button type='default'  bindtap='add' >添加</button>
+</view>

@@ -1,0 +1,18 @@
+/* pages/details/details.wxss */
+.video{width: 100%;}
+.video video{width: 100%;}
+
+.info text{display:block;width: 100%;text-align: center;font-size: 22px;font-weight: bold;line-height: 60px;}
+.info view{
+  color:#333;font-size: 14px;
+}
+image{
+  width: 100%;height: 260px;
+}
+
+.more{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

@@ -1,0 +1,12 @@
+<!--pages/typeInfo/typeInfo.wxml-->
+<view class='main'>
+  <view class='box'>
+    <text>标题</text>
+    <input type='text' value='{{title}}' bindinput='titleInput' />
+  </view>
+  <view class='box'>
+    <text>封面</text>
+    <image src='{{img}}' bindtap='upFiles'></image>
+  </view>
+  <button type="default" bindtap="submit" hover-class="other-button-hover"> 提交 </button>
+</view>

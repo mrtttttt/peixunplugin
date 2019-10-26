@@ -1,0 +1,22 @@
+{
+  "name": "tt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrtttttt/tt.git"
+  },
+  "author": "mr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrtttttt/tt/issues"
+  },
+  "homepage": "https://github.com/mrtttttt/tt#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

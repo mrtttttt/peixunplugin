@@ -1,0 +1,8 @@
+<!--pages/orderTem/orderTem.wxml-->
+<template name="orderTem">
+  
+    <view id='order' style="top:{{top}}px;left:{{left}}px;">
+      <image mode='widthFix' src='../images/dingdan.png'></image>
+    </view>
+  
+</template>

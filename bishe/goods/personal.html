@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人中心</title>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/personal.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="padding-right: 15px;">
+			<h1 class="mui-title">我的</h1>
+			<button id='setting' class=" mui-pull-right mui-btn-link">
+				<em class="mui-icon mui-icon-gear"></em>
+			</button>
+		</header>
+		<div class="userImg">
+			<div class="maskImg hide" >
+				<div>
+					<img src="images/xc-t4.jpg" alt="" />
+				</div>
+			</div>
+			<p class="loginBtn">你还没有登录，去登录</p>
+			<p class="hide">菠菜</p>
+		</div>
+		<img src="images/gd.png" alt="" class="gd" />
+		<ul class="mui-table-view">
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right">
+		                <span class="mui-icon mui-icon-paperplane"></span>
+	                	我的发布
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right">
+		                <span class="mui-icon mui-icon-download"></span>
+	                	购买我的
+		            </a>
+		        </li>
+		        <li class="mui-table-view-cell">
+		            <a class="mui-navigate-right">
+		                <span class="mui-icon mui-icon-compose"></span>
+	                	账单信息
+		            </a>
+		        </li>
+		    </ul>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			(function($, doc) {
+				$.plusReady(function(){
+					var settingPage = $.preload({
+						"id": 'setting',
+						"url": 'setting.html'
+					});
+					doc.getElementById("setting").addEventListener("tap",function(){
+						$.openWindow({
+							id:"setting",
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							}
+						})
+					})
+					doc.getElementsByClassName("loginBtn")[0].addEventListener('tap', function(event) {
+						$.openWindow({
+							url: 'login.html',
+							id: 'login',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					}, false);
+				})
+			}(mui, document));
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,27 @@
+body{background: #F4F5F9;}
+.main{
+	width: 100%;margin: 0 auto;background: #FF8053;padding: 10px 5%;
+	position: fixed;top: 0;left: 0;
+}
+.main input{background: #fff;margin-bottom: 0;}
+.goods{margin-top: 54px;}
+.gUl{
+	padding: 0;width: 100%;overflow: hidden;margin: 0;
+}
+.gLi{
+	padding: 10px 5%;
+	margin-top: 13px;width: 100%;float: left;background: #fff;
+}
+.uInfo{
+	width: 100%;overflow: hidden;
+}
+.uInfo img{
+	width: 35px;height: 35px;float: left;
+}
+.uInfo p{float: left;margin-left: 10px;line-height: 35px;color: #333;font-size: 16px;}
+.uInfo span{float: right;color: #F74949;font-size: 18px;line-height: 35px;}
+.uInfo span em{font-size: 14px;}
+.imgBox{height: 100px;overflow: hidden;}
+.imgBox img{height: 100%;float: left;margin-left: 10px;}
+.gInfo h4{line-height: 35px;font-size: 16px;}
+.gAddr p{color: #35ADFF;margin-bottom: 0;}

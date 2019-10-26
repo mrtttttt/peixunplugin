@@ -1,0 +1,44 @@
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" value="{{inputVal}}" bindinput='inputTyping' />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+      </view>
+      <view class="weui-search-bar__cancel-btn"  bindtap="inputTyping">搜索</view>
+    </view>
+   
+    
+  </view>
+  <!--菜品列表  -->
+  <!-- <scroll-view class='box' scroll-y='true'> -->
+  <view class='foods container' wx:if="{{data.length}}">
+    <view wx:for="{{data}}" wx:for-item="item"  class='food-list' >
+      <view bindtap='toDetails' data-id="{{item.objectId}}" style="background:url('{{item.mimg}}') no-repeat center/cover;">
+      </view>
+      {{item.mname}}
+      <image animation='{{animationData}}' bindtap='addList' data-id="{{item.objectId}}" src='../images/add.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <!--没有搜索内容时  -->
+  <view class='no-foods container' wx:else >
+    <view style="text-align:center">暂无菜品</view>
+      <view class='hot-head'>
+        热门搜索
+      </view>
+      <view class='hot-ul'>
+        <view wx:for="{{hotList}}" wx:for-item='item' class='hot-list' bindtap='inputTyping' data-value="{{item.mname}}">{{item.mname}}</view>
+      </view>
+    </view>
+  <!-- </scroll-view> -->
+</view>
+<import src="../../template/template.wxml"/>
+<view catchtap="ballClickEvent" catchtouchmove="ballMoveEvent" >
+  <template is="orderTem" data="{{left: left,top: top}}"/>
+</view>

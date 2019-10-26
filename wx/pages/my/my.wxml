@@ -1,0 +1,29 @@
+ <view class="container">
+    <view class="box">
+        <view class="title">Who Are We?</view>
+        <view class="body">{{info}}</view>
+    </view>
+    <view class="box">
+        <view class="title">Our Kitchenware</view>
+        <view class="imgBox">
+          <image wx:for='{{kitchenArray}}' wx:for-item='item' mode='aspectFill' src='{{item}}'></image>
+        </view>
+    </view>
+    <view class="box">
+        <view class="title">Our Team</view>
+        <view class="imgBox">
+          <image wx:for='{{teamArray}}' wx:for-item='item' mode='aspectFill' src='{{item}}'></image>
+        </view>
+    </view>
+    <view class="box">
+        <view class="title">Our Telephone</view>
+        <view class="body">
+            <view class="tel"><view class="telName">{{name0}}</view><view class="telNum">{{tel0}}</view></view>
+            <view class="tel"><view class="telName">{{name1}}</view><view class="telNum">{{tel1}}</view></view>
+        </view>
+    </view>
+    <view class="box">
+        <view class="title">Where Are We?</view>
+        <view class="body">{{location}}</view>
+    </view>
+</view>

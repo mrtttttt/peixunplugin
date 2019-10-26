@@ -1,0 +1,43 @@
+<!--pages/usInfo/usInfo.wxml-->
+<view class='main'>
+  <view class='box'>
+    <text>我们是</text>
+    <input type='text' value='{{info}}' bindinput='infoInput' />
+  </view>
+  <view class='box'>
+    <text>联系方式</text>
+    <view>
+      <view class='phoneBox'>
+        <input class='span' type='text' placeholder='姓名' value='{{name0}}' bindinput='name0Input' />
+        <input class='phone' type='number' placeholder='电话' value='{{tel0}}' bindinput='tel0Input'/>
+      </view>
+      <view>
+        <input class='span' type='text' placeholder='姓名' value='{{name1}}' bindinput='name1Input' />
+        <input class='phone' type='number' placeholder='电话' value='{{tel1}}' bindinput='tel1Input' />
+      </view>
+    </view>
+    
+  </view>
+  <view class='box'>
+    <text>地理位置</text>
+    <textarea value='{{location}}' bindinput="locationInput" auto-height />
+  </view>
+  <view class='box'>
+    <text>厨具</text>
+    <view>
+      <image wx:for='{{kitchenArray}}' wx:for-item='item' mode='aspectFit' src='{{item}}'></image>
+      <image mode='widthFix'  src='../images/addfiles.png' bindtap='kitchenFiles'></image>
+    </view>
+    
+  </view>
+  <view class='box'>
+    <text>团队</text>
+    <view>
+      <image wx:for='{{teamArray}}' wx:for-item='item' mode='aspectFit' src='{{item}}'></image>
+      <image mode='widthFix' src='../images/addfiles.png' bindtap='teamFiles'></image>
+    </view>
+      
+  </view>
+  
+  <button type="default" bindtap="submit" hover-class="other-button-hover"> 提交 </button>
+</view>

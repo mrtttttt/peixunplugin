@@ -1,0 +1,9 @@
+<!--pages/timeManage/timeManage.wxml-->
+<view class="container">
+  <view class="ul">
+    <view wx:for="{{list}}" wx:for-item="item" class='li'>{{item.fname}}<icon bindtap='del' data-id="{{item.objectId}}" type="cancel" size="20"/><icon type="info" bindtap='edit' data-id="{{item.objectId}}" size="20"/></view>
+  </view>
+  <view class="ul">
+    <view class='li' bindtap='add'>添加</view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/details/details.wxml-->
+<view class='video'>
+<image mode='aspectFill' src='{{menuList.mimg}}'></image>
+</view>
+<view class='info container'>
+  <text>{{menuList.mname}}</text>
+  <view>
+    {{menuList.minfo}}  
+  </view>
+</view>
+<view wx:if='{{login}}' class='more'>
+  <button type='default'  bindtap='toEdit' data-id='{{menuList.objectId}}'>编辑</button>
+</view>

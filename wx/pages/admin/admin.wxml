@@ -1,0 +1,28 @@
+<view wx:if="{{level>=1}}" class="container">
+  <view class="ul">
+    <view class='li' bindtap='typeManage'>类型管理</view>
+    <view class='li' bindtap='timeManage'>场景管理</view>
+    <view class='li' bindtap='menuManage'>菜单管理</view>
+  </view>
+  <view class="ul">
+    <view wx:if='{{level==2}}' class='li' bindtap=''>用户等级管理</view>
+    <view class='li' bindtap=''>清单管理</view>
+  </view>
+  <view class="ul">
+    <view class='li' bindtap='usManage'>关于我们管理</view>
+  </view>
+  <!-- <view class="ul">
+    <view class='li' bindtap='exit'>退出</view>
+  </view> -->
+</view>
+
+<view wx:elif='{{level==0}}' class="container">
+  <view class="ul">
+    <view class='li' bindtap=''>清单管理</view>
+  </view>
+</view>
+<!-- 登陆 -->
+<view wx:else class="loginInput">
+  <button bindtap='login' type='primary'>一键登录</button>
+  <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+</view>

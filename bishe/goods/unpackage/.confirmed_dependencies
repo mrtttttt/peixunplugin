@@ -1,0 +1,26 @@
+{
+  "index.html": {
+    "refer": [
+      "personal.html",
+      "login.html",
+      "home.html"
+    ],
+    "resources": [
+      "home.html"
+    ]
+  },
+  "personal.html": {
+    "refer": [
+      "setting.html",
+      "login.html"
+    ]
+  },
+  "login.html": {
+    "refer": [
+      "personal.html",
+      "index.html",
+      "forget_password.html",
+      "reg.html"
+    ]
+  }
+}
